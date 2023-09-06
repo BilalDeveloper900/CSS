@@ -1,0 +1,211 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	font-style:sans-serif ;
+}
+.banner{
+	align-items: center;
+	justify-content: space-between;
+	display: flex;
+	position: relative;
+	transition: 0.5s;
+
+}
+.banner.night{
+	background: #292828;
+}
+.banner::before{
+	conyent:'';
+	position: absolute;
+	left: 30%;
+	top:10%;
+	width: 150px;
+	height: 110px;
+	background: url(img/color.jpg);
+	background-size: cover;
+	animation: color 5s ease-in-out infinite;
+		transition-delay: -3s;
+}
+header{
+	position: absolute;
+	top: 0;
+	left: 0;
+	align-items: center;
+	justify-content: space-between;
+	display: flex;
+	transition: 0.5;
+	width: 100%;
+	padding: 20px 100px;
+}
+header ul{
+	gap: 40px;
+	display: flex;
+}
+header ul li{
+	list-style: none;
+
+}
+header ul li a{
+	text-decoration: none;
+	font-size: 20px;
+	float: right;
+	color: black;
+}
+.content{
+	position: relative;
+	max-width: 700px;
+	z-index: 10;
+	padding: 180px 100px;
+	align-items: center;
+	justify-content: center;
+	transition: 0.5s;
+
+}
+span{
+	color: purple;
+}
+.content h2{
+	font-size: 4em;
+	font-weight: 700px;
+	color: black;
+	transition: 0.5s;
+
+}
+.content h3{
+	font-size: 1.5em;
+	font-weight: 200px;
+	transition: 0.5s;
+
+}
+.content p{
+	font-size: 1.2em;
+	color: black;
+	margin: 10px 0px;
+	transition: 0.5;
+
+}
+button{
+	position: relative;
+	background: blue;
+	color: white;
+	border: none;
+	outline: none;
+	padding: 15px 35px;
+	letter-spacing: 0.05em;
+	margin-right: 20px;
+	border-radius: 5px;
+	font-weight: 600px;
+	transition: 0.5s;
+	cursor: pointer;
+}.chat{
+	background: transparent;
+	color: blue;
+}
+  i{
+	color:black;
+	position: relative;
+	font-size:20px;
+}
+.icon li a i:hover {
+	color: blue;
+	position: relative;
+	cursor: pointer;
+}
+
+.icon{
+	position: absolute;
+	display: flex;
+	bottom: 20px;
+	left: 100px;
+	gap: 20px;
+}
+.icon li a{
+/*	text-decoration: none;*/
+	font-size: 1.2em;
+	color: black;
+}
+.icon li{
+	list-style: none;
+}
+.daynight{
+	position: absolute;
+	display: flex;
+	bottom: 20px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	background: whitesmoke;
+	color: black;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	transition: 0.5s;
+	fontt-size:2em;
+}
+.banner.night .daynight i:nth-child(1)
+.daynight i:nth-child(2)
+{
+	display: none;
+}
+.banner.night .daynight :nth-child(2)
+{
+	display: block;
+}
+
+.banner.night header .logo,
+.banner.night .content h2,
+.banner.night .content h3,
+.banner.night .content p,
+.banner.night .content button.chat,
+.banner.night .icon li a,
+.banner.night .icon li i,
+.banner.night header ul li a
+{
+	color: white;
+}
+.banner.night .icon li a i:hover{
+	color: blue;
+}
+.img1{
+	position: absolute;
+	right: 130px;
+	top: 50px;
+	max-width: 700px;
+	animation: men 5s ease-in-out infinite;
+}
+
+@keyframes men{
+0%,100%
+{
+	transition: translateY(0px);
+}
+50%
+{
+	transition: translateY(50px);
+}
+}
+
+.img2{
+	position: absolute;
+	right: 0px;
+	bottom: 0;
+	max-width: 85vh;
+	z-index: -1;
+	opacity: .7;
+	animation: color 5s ease-in-out infinite;
+
+}
+
+@keyframes color{
+0%,100%
+{
+	transition: translateX(0px);
+}
+50%
+{
+	transition: translateX(-50px);
+}
+}
